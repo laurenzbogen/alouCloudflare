@@ -1,0 +1,17 @@
+---
+import GridImage from "@/components/ImageGrid.vue";
+import cloudinary from "@/cloudinary";
+
+const response = await cloudinary.search.expression("folder=Alou/grid").execute()
+
+const ids = response.resources.map((r) => ({
+  id: r.public_id,
+  height: r.height,
+  width: r.width,
+  ratio: r.width / r.height,
+}));
+//
+//
+---
+
+<GridImage ids={ids} client:load />

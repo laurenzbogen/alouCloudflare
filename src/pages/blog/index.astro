@@ -1,0 +1,19 @@
+---
+import "@/styles/globals.css";
+import { getCollection, getEntry } from "astro:content";
+
+const allBlogPosts = await getCollection("blog");
+
+import BaseLayout from "@/layouts/BaseLayout.astro"
+---
+
+<BaseLayout>
+    <h1>Blog</h1>
+
+    {allBlogPosts.map((p) => 
+      <div>
+        <a href={`/blog/${p.slug}`}>{p.id}</a>
+        <p>{p.body}</p>
+      </div>
+    )}
+</BaseLayout>

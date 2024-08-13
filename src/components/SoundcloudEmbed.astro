@@ -1,0 +1,28 @@
+---
+const { class: className, data: { name, link } } = Astro.props
+
+const src = getIdFromCode(link)
+const url = `${src}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=false`
+
+
+function getIdFromCode(inputString: string) {
+  const startMarker = 'src="'
+  const endMarker = '&color';
+
+  const startIndex = inputString.indexOf(startMarker);
+  const endIndex = inputString.indexOf(endMarker);
+  const trimmedString = inputString.substring(startIndex + startMarker.length, endIndex)
+
+  return trimmedString
+}
+---
+
+
+<div class={className}>
+  <div class="w-full m-auto">
+    <h4>{name}</h4>
+    <iframe width="100%" height="20" frameborder="no" src={url} style="background:transparent; margin-bottom: 2px;"></iframe>
+  </div>
+</div>
+
+

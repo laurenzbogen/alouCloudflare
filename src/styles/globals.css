@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+/* #4c5b6e */
+/* #417685 */
+/* #417d8c */
+/* #e4e9ec */
+/* #c4d1d6 */
+/* #a5b7bf */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    /* Muted backgrounds such as <TabsList />, <Skeleton /> and <Switch /> */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Background color for <Card /> */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    /* Background color for popovers such as <DropdownMenu />, <HoverCard />, <Popover /> */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    /* Default border color */
+    --border: 214.3 31.8% 91.4%;
+    /* Border color for inputs such as <Input />, <Select />, <Textarea /> */
+    --input: 214.3 31.8% 91.4%;
+    /* Primary colors for <Button /> */
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    /* Secondary colors for <Button /> */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Used for accents such as hover effects on <DropdownMenuItem>, <SelectItem>...etc */
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Used for destructive actions such as <Button variant="destructive"> */
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+    /* Used for focus ring */
+    --ring: 215 20.2% 65.1%;
+    /* Border radius for card, input and buttons */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: "Edu AU VIC WA NT Hand";
+    src: url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Lato:wght@100&family=Roboto&family=Space+Mono:wght@700&display=swap");
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1 {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
+  h2 {
+    @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
+  }
+  h3 {
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+  h4 {
+    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+  }
+  p {
+    @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
+  blockquote {
+    @apply mt-6 border-l-2 pl-6 italic;
+  }
+  ul {
+    @apply my-6 ml-6 list-disc [&>li]:mt-2;
+  }
+  a {
+    @apply underline hover:text-blue-800;
+  }
+  code {
+    @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+  }
+  .lead {
+    @apply text-xl text-muted-foreground;
+  }
+  .large {
+    @apply text-lg font-semibold;
+  }
+  .small {
+    @apply text-sm font-medium leading-none;
+  }
+  .muted {
+    @apply text-sm text-muted-foreground;
+  }
+}

@@ -1,0 +1,108 @@
+---
+import { getCollection } from "astro:content";
+
+import Link from "@/components/Link.vue";
+import CdnImage from "@/components/CdnImage.astro";
+import Image from "astro/components/Image.astro";
+import Background1 from "@/assets/images/background1.jpeg";
+import Bio from "@/data/bio.md";
+
+import { Instagram } from "lucide-astro";
+import { instagram } from "@/data/data.json"
+import { Button } from "@/components/ui/button";
+
+import ClImage from "@/components/ClImage.vue";
+import ImageGrid from "@/components/ImageGrid.astro";
+
+import { dates } from "@/data/liveDates.json";
+import LiveDate from "@/components/LiveDate.vue";
+
+import soundcloudData from "@/data/soundcloud.json";
+import SoundcloudEmbed from "@/components/SoundcloudEmbed.astro";
+import youtubeData from "@/data/videos.json";
+import YTEmbed from "@/components/YTEmbed.astro";
+
+import ContactWrapper from "@/components/Contact.vue";
+
+
+// Get all entries from a collection.
+// Requires the name of the collection as an argument.
+// Example: retrieve `src/content/blog/**`
+const allBlogPosts = await getCollection("blog");
+const { Content, headings } = await allBlogPosts[0].render();
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="" class="font-serif m-auto border-l border-r border-black">
+  <header class="absolute w-full flex justify-between items-center">
+    <div class="relative z-10">
+      <img src="/logo.png" alt="logo" class="h-32 object-contain" />
+    </div>
+    <nav class="flex justify-end items-center p-4 gap-8 z-10 top-0 right-0">
+      <Link variant="link" href="#quartet">Quartet</Link>
+      <Link variant="link" href="#termine">Termine</Link>
+      <Link variant="link" href="#media">Media</Link>
+      <Link variant="link" size="icon" href={instagram}>
+        <Instagram class="w-4" />
+      </Link>
+      <ContactWrapper client:only>
+      <!-- Standard Link Styling -->
+        <Button class="underline hover:text-blue-800" variant="link">Kontakt</Button>
+      </ContactWrapper>
+    </nav>
+  </header>
+  <div class="full relative">
+    <ClImage
+      class="w-full aspect-[1.7] object-cover"
+      id="Alou/xrvb2c83zcpfxhm6nwlj"
+    />
+  </div>
+  <section id="quartet" class="bg-background1 bg-cover py-12 px-6 md:px-12">
+    <div class="font-serif max-w-prose text-center md:px-12 m-auto">
+      <Bio />
+    </div>
+  </section>
+  <section class="bg-background2 bg-cover p-4 md:p-12 py-12" id="termine">
+    <h2 class="my-6 md:mx-6">Termine</h2>
+    <ul class="max-w-md lg:my-16 m-auto">
+      {dates.map((d) => <LiveDate data={d} />)}
+    </ul>
+  </section>
+
+  <!-- <ClImage -->
+  <!--   class="w-full h-full object-[center_-100px] object-cover" -->
+  <!--   id="Alou/qffr9tdkrgjdlrkh63xx" -->
+  <!-- /> -->
+
+  <section
+    id="media"
+    class="bg-background7 bg-cover p-4 md:p-12 py-12"
+    id="termine"
+  >
+    <h2 class="text-white">Media</h2>
+    <div
+      class="flex flex-wrap w-full max-w-xl lg:max-w-[unset] justify-center my-12 mx-auto"
+    >
+      {
+        youtubeData.videos.map((v) => (
+          <YTEmbed
+            url={v.link}
+            class="basis-full lg:basis-1/2 p-4 aspect-video"
+          />
+        ))
+      }
+    </div>
+
+    <div class="my-16 max-w-screen-lg m-auto">
+      {
+        soundcloudData.soundcloud.map((s) => (
+          <SoundcloudEmbed data={s} class="text-white m-8" />
+        ))
+      }
+    </div>
+  </section>
+  <section id="media" class="bg-background4 bg-cover p-4 md:p-12 py-12">
+    <ImageGrid />
+  </section>
+
+</BaseLayout>

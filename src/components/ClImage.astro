@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+// Import the Cloudinary class
+import { Cloudinary } from "@cloudinary/url-gen";
+
+// Create your instance
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dosf58dnx",
+  },
+  url: {
+    secure: true, // force https, set to false to force http
+  },
+});
+
+// Let's create a new image
+const myImage = cld.image("vicdim9qqqdstpbidwld");
+myImage.quality("auto")
+myImage.resize(Resize.scale().width(1080))
+
+// Import the resize transformation and apply it to myImage
+import { Resize } from "@cloudinary/url-gen/actions/resize";
+
+
+const props = Astro.props;
+
+function get_cloudinary_image(id: string) {
+  const img = cld.image(id);
+  img.quality("auto");
+  img.format("auto");
+  return img;
+}
+
+function get_srcset(id: string) {
+  const sizes = [540, 720, 1080];
+  const imgs = sizes.map(s => get_cloudinary_image(id));
+  const srcs = [];
+  for(let i=0; i<sizes.length; i++) {
+    srcs[i] = `${imgs[i].resize(Resize.scale().width(sizes[i])).toURL()} ${sizes[i]}w,`;
+  }
+  const srcset = srcs.join("\n")
+  return srcset
+}
+---
+
+
+<img {...props} src="" alt="test" srcset={get_srcset("vicdim9qqqdstpbidwld")} />
+

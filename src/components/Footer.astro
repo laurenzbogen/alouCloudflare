@@ -1,0 +1,42 @@
+---
+import { Button } from "@/components/ui/button";
+import ContactWrapper from "@/components/Contact.vue";
+
+import Link from "@/components/Link.vue"
+
+import { Instagram, AudioLines, Youtube } from "lucide-astro";
+import { instagram, youtube, soundcloud } from "@/data/data.json"
+
+const socials = [
+  {icon: Instagram, link: instagram},
+  {icon: AudioLines, link: soundcloud },
+  {icon: Youtube, link: youtube },
+]
+
+const isRoot = Astro.url.pathname === "/"
+
+---
+<footer class="bg-background4 bg-cover border-t-black border-t-[1px]">
+  <div class="m-auto py-12 w-full max-w-xl flex justify-around items-center">
+    <Link href={isRoot ? "/impressum" : "/"} variant="link">
+      { isRoot
+          ? "Impressum"
+          : "Home"
+      }
+    </Link>
+    <Link variant="link" href="/presse">Presse</Link>
+    <div class="flex justify-around">
+      {
+        socials.map(({ icon: Icon, link }) => (
+          <Link href={link} variant="link" size="icon">
+            <Icon />
+          </Link>
+        ))
+      }
+    </div>
+    <ContactWrapper client:only>
+      <!-- Standard Link Styling -->
+      <Button class="underline hover:text-blue-800" variant="link">Kontakt</Button>
+    </ContactWrapper>
+  </div>
+</footer>

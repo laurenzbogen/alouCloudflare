@@ -1,0 +1,101 @@
+local_backend: true
+
+backend:
+  name: 'git_gateway'
+
+media_folder: "src/assets/images" # Location where files will be stored in the repo
+
+collections:
+  - name: blog
+    label: Blog
+    folder: 'src/content/blog'
+    create: true
+    identifier_field: name
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: 'images'
+    label: 'Images'
+    folder: 'src/data/imageData'
+    create: true
+    identifier_field: 'name'
+    extension: 'json'
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+  - name: 'data' # Used in routes, e.g., /admin/collections/blog
+    label: 'Data' # Used in the UI
+    files: 
+      - label: 'Live Dates'
+        name: 'liveDates'
+        file: 'src/content/liveDates.json'
+        fields: # The fields for each document, usually in front matter
+          - label: 'Dates'
+            name: 'dates'
+            widget: 'list'
+            fields:
+              - {label: 'Venue', name: 'venue', widget: 'string'}
+              - {label: 'Date', name: 'date', widget: 'datetime'}
+              - {label: 'City', name: 'city', widget: 'string'}
+      - label: 'Bio'
+        name: 'bio'
+        file: 'src/data/bio.md'
+        fields:
+          - {label: "Body", name: 'body', widget: 'markdown'}
+      - label: 'Videos'
+        name: 'videos'
+        file: 'src/data/videos.json'
+        fields:
+          - label: 'Videos'
+            name: 'videos'
+            widget: 'list'
+            fields:
+              - {label: 'Name', name: 'name', widget: 'string'}
+              - {label: 'Description', name: 'description', widget: 'markdown', required: false}
+              - {label: 'Link', name: 'link', widget: 'string'}
+      - label: 'Soundcloud'
+        name: 'soundcloud'
+        file: 'src/data/soundcloud.json'
+        fields:
+          - label: 'Soundcloud'
+            name: 'soundcloud'
+            widget: 'list'
+            fields:
+              - {label: 'Name', name: 'name', widget: 'string'}
+              - {label: 'Description', name: 'description', widget: 'markdown', required: false}
+              - {label: 'Link', name: 'link', widget: 'string'}
+      - label: 'Links'
+        name: 'links'
+        file: 'src/data/links.json'
+        fields:
+          - label: 'Links'
+            name: 'links'
+            widget: 'list'
+            fields:
+              - {label: 'Name', name: 'name', widget: 'string'}
+              - {label: 'Link', name: 'link', widget: 'string'}
+      - label: 'Downloads'
+        name: 'downloads'
+        file: 'src/data/downloads.json'
+        media_folder: '/public/assets/downloads'
+        public_folder: '/assets/downloads'
+        fields:
+          - label: 'Downloads'
+            name: 'downloads'
+            widget: 'list'
+            fields: 
+              - {label: Name, name: 'name', widget: 'string'}
+              - {label: File, name: 'file', widget: 'file'}
+      - label: 'Data'
+        name: 'data'
+        file: 'src/data/data.json'
+        fields:
+          - {label: 'Email', name: 'email', widget: 'string'}
+          - {label: 'Instagram', name: 'instagram', widget: 'string'}
+          - {label: 'Soundcloud', name: 'soundcloud', widget: 'string'}
+          - {label: 'Youtube', name: 'youtube', widget: 'string'}
+      - label: 'Impressum'
+        name: 'impressum'
+        file: 'src/data/impressum.md'
+        fields:
+          - {label: 'Body', name: 'body', widget: 'markdown'}

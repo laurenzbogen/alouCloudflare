@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import type { HTMLAttributes } from "astro/types";
+import type { ImgAttributes } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+export interface Props extends ImgAttributes{
+}
+
+const { id, ...attr } = Astro.props;
+
+const paths = import.meta.glob("/src/data/imageData/*");
+const path = Object.keys(paths).find((p) => p.includes(`/${id}.json`));
+if (path === undefined) {
+  throw new Error(`Couldnt Find Image with id ${id} from CDN`);
+}
+
+const imageName = extractImageName(await paths[path]());
+
+const images = await Astro.glob("/src/assets/images/*");
+const image = images.find((i) => {
+  return i.default.src.includes(imageName);
+});
+if (image === undefined) {
+  throw new Error(`Couldnt Find Image with id ${id} from associated Path CDN`);
+}
+
+const imageSource = image.default as ImageMetadata;
+
+function extractImageName(input: any) {
+  const data = input.default.image;
+  const withoutPath = data.substring(data.lastIndexOf("/") + 1);
+  const lastIndex = withoutPath.lastIndexOf(".");
+  if (lastIndex === -1) {
+    throw new Error(
+      `Couldnt find extension while extracting image name from CDN. (Id ${id})`,
+    );
+  }
+  return withoutPath.substring(0, lastIndex);
+}
+---
+
+<Image src={imageSource} {...attr} />
