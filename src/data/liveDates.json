@@ -1,39 +1,50 @@
 {
   "dates": [
     {
-      "date": "2024-10-10T20:00:00.000Z",
-      "venue": "Salon Hansen ",
-      "city": "Lüneburg",
-      "commentLink": "www.qubur.de",
-      "comment": "mit qubur",
-      "mainLink": "www.qubur.de"
+      "date": "2024-09-16T19:30:00.000Z",
+      "venue": "Cafe Saite",
+      "city": "Dresden",
+      "commentLink": "",
+      "comment": "",
+      "mainLink": ""
     },
     {
-      "date": "2024-09-15T20:00:00.000Z",
-      "venue": "Dots",
-      "city": "Göttingen",
-      "comment": "mit Milonaut",
-      "commentLink": "www.milonaut.de"
+      "date": "2024-09-20T18:00:00.000Z",
+      "venue": "Kinderkonzerte Musikbrauerei",
+      "city": "Berlin",
+      "comment": "",
+      "commentLink": ""
     },
     {
-      "date": "2024-09-20T20:00:00.000Z",
-      "venue": "Pierre Grasse",
-      "city": "Halle",
-      "comment": "mit Milonaut",
-      "commentLink": "www.milonaut.de"
+      "date": "2024-09-21T17:00:00.000Z",
+      "venue": "Kultur Farm",
+      "city": "Brandenburg",
+      "comment": "",
+      "commentLink": "",
+      "mainLink": "https://kultur.farm/event/alou-stringquartett-saisonabschluss/"
     },
     {
-      "date": "2025-01-08T20:00:00.000Z",
-      "venue": "C-Keller",
-      "city": "Weimar",
-      "comment": "mit Milonaut",
-      "commentLink": "www.milonaut.de"
+      "date": "2024-09-22T20:00:00.000Z",
+      "venue": "Musikbrauerei",
+      "city": "Berlin",
+      "comment": "",
+      "commentLink": ""
     },
     {
-      "date": "2024-12-12T19:30:00.000Z",
+      "date": "2024-12-04T20:00:00.000Z",
       "venue": "Horns Erben",
       "city": "Leipzig",
-      "comment": "Session-Opener"
+      "comment": ""
+    },
+    {
+      "venue": "Stade, Seminarturnhalle",
+      "city": "Hamburg",
+      "date": "2024-12-05T20:00:00.000Z"
+    },
+    {
+      "venue": "Cafe Plume",
+      "city": "Berlin",
+      "date": "2024-12-06T20:00:00.000Z"
     }
   ]
 }

@@ -6,29 +6,12 @@ backend:
 media_folder: "src/assets/images" # Location where files will be stored in the repo
 
 collections:
-  - name: blog
-    label: Blog
-    folder: 'src/content/blog'
-    create: true
-    identifier_field: name
-    fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: 'images'
-    label: 'Images'
-    folder: 'src/data/imageData'
-    create: true
-    identifier_field: 'name'
-    extension: 'json'
-    fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
   - name: 'data' # Used in routes, e.g., /admin/collections/blog
     label: 'Data' # Used in the UI
     files: 
       - label: 'Live Dates'
         name: 'liveDates'
-        file: 'src/content/liveDates.json'
+        file: 'src/data/liveDates.json'
         fields: # The fields for each document, usually in front matter
           - label: 'Dates'
             name: 'dates'
@@ -37,6 +20,9 @@ collections:
               - {label: 'Venue', name: 'venue', widget: 'string'}
               - {label: 'Date', name: 'date', widget: 'datetime'}
               - {label: 'City', name: 'city', widget: 'string'}
+              - {label: 'Main Link', name: 'mainLink', widget: 'string', required: false}
+              - {label: 'Comment', name: 'comment', widget: 'string', required: false}
+              - {label: 'CommentLink', name: 'commentLink', widget: 'string', required: false}
       - label: 'Bio'
         name: 'bio'
         file: 'src/data/bio.md'

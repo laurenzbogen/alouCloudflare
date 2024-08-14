@@ -15,10 +15,9 @@ const formattedDate = new Date(date).toLocaleDateString("de-DE", {
   month: "short",
   day: "2-digit",
 })
-const formattedTime = new Date(date).toLocaleTimeString("de-DE", {
-  hour: "2-digit",
-  minute: "2-digit",
-})
+const parsedDate = new Date(date)
+// hacky solution because of utc problems
+const formattedTime = parsedDate.getUTCHours().toString().padStart(2, '0') + ":" + parsedDate.getUTCMinutes().toString().padStart(2, '0');
 
 </script>
 <template>
@@ -41,8 +40,8 @@ const formattedTime = new Date(date).toLocaleTimeString("de-DE", {
         {{ comment }}
       </a>
         </Button>
-      <Button v-if="mainLink !== undefined" variant="header" class="h-8 p-0 m-0 underline font-semibold">
-        <Ticket class="w-5 h-5 mr-2" /> Veranstaltung
+      <Button v-if="mainLink !== undefined && mainLink !== ''" variant="header" class="h-8 p-0 m-0 underline font-semibold">
+        <Ticket class="w-5 h-5 mr-2" /> <a :href=mainLink>Veranstaltung</a>
       </Button>
     </div>
   </li>
