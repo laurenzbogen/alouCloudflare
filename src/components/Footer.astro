@@ -2,41 +2,31 @@
 import { Button } from "@/components/ui/button";
 import ContactWrapper from "@/components/Contact.vue";
 
-import Link from "@/components/Link.vue"
+import Link from "@/components/Link.vue";
 
-import { Instagram, AudioLines, Youtube } from "lucide-astro";
-import { instagram, youtube, soundcloud } from "@/data/data.json"
+import Socials from "@/components/Socials.vue";
 
-const socials = [
-  {icon: Instagram, link: instagram},
-  {icon: AudioLines, link: soundcloud },
-  {icon: Youtube, link: youtube },
-]
-
-const isRoot = Astro.url.pathname === "/"
-
+const isRoot = Astro.url.pathname === "/";
 ---
-<footer class="border-t-black border-t-[1px]">
-  <div class="m-auto py-12 w-full max-w-xl flex justify-around items-center">
+
+<footer class="py-8 border-t-[1px]">
+  <div class="m-auto w-full max-w-xl flex justify-around items-center">
     <Link href={isRoot ? "/impressum" : "/"} variant="link">
-      { isRoot
-          ? "Impressum"
-          : "Home"
-      }
+      {isRoot ? "Impressum" : "Home"}
     </Link>
     <Link variant="link" href="/presse">Presse</Link>
-    <div class="flex justify-around">
-      {
-        socials.map(({ icon: Icon, link }) => (
-          <Link href={link} variant="link" size="icon">
-            <Icon />
-          </Link>
-        ))
-      }
+    <div class="hidden md:flex justify-around">
+      <Socials />
     </div>
     <ContactWrapper client:only>
       <!-- Standard Link Styling -->
-      <Button class="underline hover:text-blue-800" variant="link">Kontakt</Button>
+      <Button class="underline hover:text-blue-800" variant="link">
+        Kontakt
+      </Button>
     </ContactWrapper>
+  </div>
+
+  <div class="flex md:hidden justify-center gap-4 mt-4">
+    <Socials />
   </div>
 </footer>

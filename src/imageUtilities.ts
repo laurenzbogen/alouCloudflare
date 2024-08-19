@@ -51,6 +51,13 @@ export function getCldSourcset(sourceGen: SourceGen): string {
 	return srcset
 }
 
+export function getCldSource(id: string): string {
+	const width = twSizes.md
+	const img = get_cloudinary_image(id)
+	// return img.resize(Resize.scale().width(width)).toURL();
+	return img.toURL();
+}
+
 
 
 function get_cloudinary_image(id: string) {

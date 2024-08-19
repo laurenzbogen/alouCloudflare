@@ -1,14 +1,18 @@
 ---
 import GridImage from "@/components/ImageGrid.vue";
 import cloudinary from "@/cloudinary";
+import * as rfc from "rfc4648";
 
 const response = await cloudinary.search.expression("folder=Alou/grid").execute()
+// const response = await cloudinary.search.expression("folder=Alou/grid/3C40K140B1J9CMROITVOH2G00000000=").execute()
+
 
 const ids = response.resources.map((r) => ({
   id: r.public_id,
   height: r.height,
   width: r.width,
   ratio: r.width / r.height,
+  // placeholder: rfc.base32hex.parse(r.filename)
 }));
 //
 //

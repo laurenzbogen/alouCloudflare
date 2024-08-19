@@ -7,7 +7,6 @@ export interface LinkProps extends ButtonProps {
 }
 
 const { href, asChild: _, ...props } = defineProps<LinkProps>()
-console.log("link", props)
 
 const buttonProps = props as ButtonProps
 

@@ -1,11 +1,14 @@
-<script setup>
+<script setup lang="ts">
 import { twMerge } from "tailwind-merge";
-import { ref } from "vue";
-import { getCldSourcset, getSizes } from "@/imageUtilities"
+import { onMounted, ref } from "vue";
+import { getCldSourcset, getSizes, getCldSource } from "@/imageUtilities"
+
+import * as thumb from "thumbhash"
+import placeholders from "@/data/placeholders.json"
 
 const testURL = `https://picsum.photos/seed/${Math.random()}/800`;
 
-const { id, aspectRatio, cropRatio, height, width, className } = defineProps({
+const { id, aspectRatio, cropRatio, height, width, className, placeholder } = defineProps({
   id: String,
   height: Number,
   width: Number,
@@ -15,11 +18,23 @@ const { id, aspectRatio, cropRatio, height, width, className } = defineProps({
   // Todo Typescript support for ImageSizes
   sizes: Array,
   loading: String,
+  placeholder: Uint8Array,
+
+  pid: String,
 })
+
+const placeholderBinary = placeholder
+
+const placeholderURL = placeholderBinary === undefined ?
+  ""
+  : thumb.thumbHashToDataURL(placeholderBinary)
+
+
+
 
 
 const srcSet = getCldSourcset({
-  id: id,
+  id: id as string,
   widths: undefined,
   cropRatio: cropRatio,
 })
@@ -27,8 +42,13 @@ const srcSet = getCldSourcset({
 
 
 const img = ref(null);
+const imgLoading = ref(true);
 
-const bassCl = ""
+function loadedCallback() {
+  imgLoading.value = false;
+  console.log(imgLoading.value, id)
+}
+const bassCl = "relative"
 const cl = twMerge(bassCl, className, getRatio())
 function getRatio() {
   const ratio = aspectRatio === undefined ? cropRatio : aspectRatio
@@ -37,15 +57,13 @@ function getRatio() {
   return `w-auto h-full aspect-[${ratio}]`
 }
 
-function get_fallback(id) {
-  return ""
-  if (id == "test") return testURL
-  const img = get_cloudinary_image(id);
-  return img.toURL();
-}
+const source = getCldSource(id as string)
 </script>
 
 <template>
-  <img ref="img" :class="cl" :src="get_fallback(src)" :loading="loading? loading : 'lazy'" alt="test" :sizes="getSizes(sizes)"
-    :srcset="srcSet" />
+  <div :class="cl">
+    <img :src="placeholderURL" class="absolute top-0 left-0 w-full h-full object-cover" alt="">
+    <img ref="img" class="relative w-full h-full object-cover" :src="source" :loading="loading ? loading : 'lazy'" alt="test"
+      :sizes="getSizes(sizes)" @load="imgLoading = false" :srcset="srcSet" />
+  </div>
 </template>

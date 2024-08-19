@@ -25,7 +25,7 @@ const { ids } = defineProps(["ids"])
 		<div @interactOutside="console.log('asdasda')" class="grid grid-cols-2 sm:grid-cols-3 gap-1 p-1 cursor-auto">
 			<Dialog v-for="(image, i) in ids" class="">
 				<DialogTrigger >
-					<ClImage class="align-middle w-full cursor-pointer" :id="image.id" :crop-ratio="1"
+					<ClImage class="align-middle w-full cursor-pointer" :id="image.id" :crop-ratio="1" :placeholder="image.placeholder"
 						:sizes="[[['sm', '33vw']], '50vw']" />
 				</DialogTrigger>
 				<DialogContent @close-auto-focus="(e) => {}"
