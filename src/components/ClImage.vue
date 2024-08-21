@@ -23,11 +23,14 @@ const { id, aspectRatio, cropRatio, height, width, className, placeholder } = de
   pid: String,
 })
 
-const placeholderBinary = placeholder
+// const placeholderBinary = placeholder
+const placeholderBinary = [215, 247, 21, 13, 130, 151, 151, 135, 127, 119, 135, 138, 135, 135, 120, 136, 112, 142, 9, 211, 166]
 
 const placeholderURL = placeholderBinary === undefined ?
   ""
   : thumb.thumbHashToDataURL(placeholderBinary)
+
+console.log("PPP", placeholderURL)
 
 
 

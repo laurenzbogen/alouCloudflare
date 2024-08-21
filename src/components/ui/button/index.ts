@@ -23,7 +23,8 @@ export const buttonVariants = cva(
         sm: 'h-9 px-3',
         lg: 'h-11 px-8',
         icon: 'h-10 w-10',
-        icon_lg: 'h-11 w-11',
+        header: 'h-9 px-3 md:text-xl md:h-11 md:px-8',
+        icon_header: 'h-9 w-9 md:h-11 md:w-11',
       },
     },
     defaultVariants: {

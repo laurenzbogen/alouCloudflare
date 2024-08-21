@@ -12,43 +12,48 @@ import { Instagram } from "lucide-vue-next";
 
 <template>
   <header class="relative flex flex-col lg:flex-col">
-    <div class="flex justify-center lg:flex">
-      <img src="/logo.png" alt="logo" class="h-36 md:h-56 object-contain" />
+    <div class="lg:hidden flex justify-center lg:flex">
+      <img src="/logo.png" alt="logo" class="h-36 object-contain" />
     </div>
-    <nav class="lg:block hidden items-center p-2 w-full">
-      <div class="max-w-xl flex justify-around m-auto gap-8">
-        <Link class="" variant="link" href="#quartet">Quartet</Link>
-        <Link class="" variant="link" href="#termine">Termine</Link>
-        <Link class="" variant="link" href="#media">Media</Link>
-      </div>
-    </nav>
-    <div class="relative max-w-[120vh] m-auto">
-      <ClImage class="w-full object-cover aspect-[1.6] md:aspect-[1.8]" id="Alou/xrvb2c83zcpfxhm6nwlj" pid="hero" />
-      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex justify-between w-full items-end max-w-screen-3xl">
+    <div class="relative">
+      <img class="absolute top-0 left-0 w-full h-full aspect-[1.8] object-cover" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAXCAYAAABqBU3hAAAMEElEQVR4AQCBAH7/ANjk4f/W4d//093b/8/Z1//N1dP/zdPS/8/U0v/T1tX/2NnY/93c2//h3t3/497e/+Pc3P/i2dj/4NXV/97S0f/dz87/3M7N/93OzP/dzcv/3MzJ/9rLx//YyMP/1cXA/9LDvf/Sw7z/08W+/9fJwf/dz8f/49bN/+jb0v/r3tX/AIEAfv8A0dza/8/a2P/L1tT/yNHQ/8XOzP/FzMr/x8zL/8vOzf/Q0dD/1dTU/9nW1v/b1tb/29XU/9rS0f/Yzs7/18vK/9bJyP/WyMb/1sfF/9bHxf/Wx8P/1MXB/9LDvv/PwLv/zr+5/82/uP/Qwrv/1Me//9rNxf/h1Mz/59rR/+re1f8AgQB+/wDDz83/wc3L/73Jx/+5xML/t8C+/7a9vP+3vbz/u7++/8DCwv/FxcX/ycfH/8zIyP/Nxsb/zMTE/8rBwf/Jvr7/yLy7/8m8uv/JvLr/yry5/8q7uP/Jurf/x7m0/8W3sv/EtrD/xbix/8i7tP/Owrr/1srB/93Syf/k2M//59zT/wCBAH7/ALG+vf+vvLr/q7e2/6eysf+jrq3/oquq/6Oqqv+nrKv/rK6u/7Gxsv+1tLT/uLS1/7m0tP+4srL/uK+v/7etrf+3rKv/t6uq/7isqv+5rKr/uqyp/7mrqP+4qqb/t6ql/7eqpf+5raf/vrKs/8a6s//PxLz/2M3F/9/VzP/j2dD/AIEAfv8Anqyr/5uqqf+XpaT/kp+e/46amf+Nlpb/jZWV/5CWl/+VmZn/mpyc/56en/+hn6D/op+f/6Odnv+im5z/opqa/6OZmf+kmZj/pZqY/6aamP+mmpj/ppqX/6Walv+lmpX/p5uW/6ugmv+xp6D/u7Gq/8a8tf/Qx7//2dDI/97VzP8AgQB+/wCLm5v/iZiY/4STk/9/jY3/eoeH/3iDg/93gYL/eoGC/36Dhf+Dhof/h4iK/4qKi/+Miov/jYmK/42HiP+Nhof/joaG/4+Ghv+Rh4b/koeG/5KIhv+Sh4X/kYeE/5KIhP+Ui4b/mpGL/6KalP+upZ//urOs/8e/uP/RycL/1s/H/wCBAH7/AHuNjf94ior/c4SF/259fv9od3j/ZXJz/2Rvcf9mb3H/aXBy/25zdf9ydXf/dXZ4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" alt="">
+      <div class="relative max-w-[150vh] m-auto">
+        <ClImage class="w-full object-cover aspect-[1.6] md:aspect-[1.8]" id="Alou/xrvb2c83zcpfxhm6nwlj" pid="hero" />
+        <!-- <nav class="lg:block hidden absolute top-0 items-center p-8 w-full"> -->
+        <!--   <div class="max-w-xl flex justify-around m-auto gap-8 xl:text-2xl 2xl:text-4xl 2xl:gap-16"> -->
+        <!--     <Link class="text-[length:inherit]" variant="link" href="#quartet">Quartet</Link> -->
+        <!--     <Link class="text-[length:inherit]" variant="link" href="#termine">Termine</Link> -->
+        <!--     <Link class="text-[length:inherit]" variant="link" href="#media">Media</Link> -->
+        <!--   </div> -->
+        <!-- </nav> -->
+        <img src="/logo.png" alt="logo" class="hidden lg:block absolute top-0 left-0 w-[18%] object-contain" />
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex justify-between w-full items-end max-w-screen-3xl">
 
 
-        <!-- <img :src="url" class="w-full object-cover aspect-[1.6] xl:aspect-[1.8]" id="Alou/xrvb2c83zcpfxhm6nwlj" /> -->
+          <!-- <img :src="url" class="w-full object-cover aspect-[1.6] xl:aspect-[1.8]" id="Alou/xrvb2c83zcpfxhm6nwlj" /> -->
 
-        <div class="opacity-0 lg:opacity-0">
-          <img src="/logo.png" alt="logo" class="invert h-[20vw] object-contain" />
-        </div>
+          <div class="opacity-0 lg:opacity-0">
+            <img src="/logo.png" alt="logo" class="invert h-[20vw] object-contain" />
+          </div>
 
-        <div class="m-6 gap-4 flex">
-          <ContactWrapper client:only>
-            <!-- Standard Link Styling -->
-            <Button class="text-white underline hover:text-blue-800" size="lg" variant="outline">
-              <div class="text-xl">Kontakt</div>
+          <div class="m-6 gap-4 flex">
+            <ContactWrapper client:only>
+              <!-- Standard Link Styling -->
+              <Button class="text-white underline hover:text-blue-800" size="header" variant="outline">
+                <div class="">Kontakt</div>
+              </Button>
+            </ContactWrapper>
+            <Button class="text-white underline hover:text-blue-800" size="icon_header" variant="outline">
+              <Instagram class="w-4" />
             </Button>
-          </ContactWrapper>
-          <Button class="text-white underline hover:text-blue-800" size="icon_lg" variant="outline">
-            <Instagram class="w-4" />
-          </Button>
+          </div>
         </div>
       </div>
     </div>
 
 
-    <nav class="lg:hidden bg-background1 bg-cover items-center p-2 w-full">
+
+    <nav class="bg-background1 bg-cover items-center p-2 w-full">
       <div class="max-w-xl flex justify-around m-auto gap-8">
         <Link class="" variant="link" href="#quartet">Quartet</Link>
         <Link class="" variant="link" href="#termine">Termine</Link>
