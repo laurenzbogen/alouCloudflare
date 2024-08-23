@@ -9,7 +9,7 @@ import Socials from "@/components/Socials.vue";
 const isRoot = Astro.url.pathname === "/";
 ---
 
-<footer class="py-8 border-t-[1px]">
+<footer class="py-8 border-gray-400 border-t-[1px]">
   <div class="m-auto w-full max-w-xl flex justify-around items-center">
     <Link href={isRoot ? "/impressum" : "/"} variant="link">
       {isRoot ? "Impressum" : "Home"}
@@ -18,9 +18,9 @@ const isRoot = Astro.url.pathname === "/";
     <div class="hidden md:flex justify-around">
       <Socials />
     </div>
-    <ContactWrapper client:only>
+    <ContactWrapper client:load>
       <!-- Standard Link Styling -->
-      <Button class="underline hover:text-blue-800" variant="link">
+      <Button class="underline hover:text-accent" variant="link">
         Kontakt
       </Button>
     </ContactWrapper>

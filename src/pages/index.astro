@@ -25,6 +25,7 @@ import YTEmbed from "@/components/YTEmbed.astro";
 import ContactWrapper from "@/components/Contact.vue";
 
 import Header from "@/components/Header.vue";
+import Toaster from '@/components/ui/toast/Toaster.vue'
 
 // Get all entries from a collection.
 // Requires the name of the collection as an argument.
@@ -34,7 +35,7 @@ const { Content, headings } = await allBlogPosts[0].render();
 import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="" class="font-serif m-auto border-l border-r border-black">
+<BaseLayout title="" class="font-serif m-auto">
   <Header client:load />
 
   <section id="quartet" class="bg-background1 bg-cover py-12 px-6 md:px-12">
@@ -43,7 +44,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     </div>
   </section>
   <section class="bg-background2 bg-cover p-4 md:p-12 py-12" id="termine">
-    <h2 class="my-6 md:mx-6">Termine</h2>
+    <h2 class="my-6 md:mx-6 border-black">Termine</h2>
     <ul class="max-w-md lg:my-16 m-auto">
       {dates.map((d) => <LiveDate data={d} />)}
     </ul>
@@ -81,7 +82,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       }
     </div>
   </section>
-  <section id="media" class="bg-background4 bg-cover p-4 md:p-12 py-12">
+  <section id="media" class="bg-background1 bg-cover p-4 md:p-12 py-12">
     <ImageGrid />
   </section>
+  <Toaster />
 </BaseLayout>

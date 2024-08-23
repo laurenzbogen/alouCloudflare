@@ -28,11 +28,11 @@ const title =
     <title>{title}</title></head
   >
 
-  <body  class="bg-gray-200 min-h-screen flex flex-col justify-between"{...attr}>
+  <body  class="bg-background min-h-screen flex flex-col justify-between"{...attr}>
     <slot>
       <h1>Empty Template</h1>
     </slot>
 
-    <Footer />
+    <Footer client:load/>
   </body>
 </html>

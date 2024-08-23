@@ -11,8 +11,9 @@
 /* #e4e9ec */
 /* #c4d1d6 */
 /* #a5b7bf */
+/* #BCC0BF */
   :root {
-    --background: 0 0% 100%;
+    --background: 155 2% 68%;
     --foreground: 222.2 47.4% 11.2%;
     /* Muted backgrounds such as <TabsList />, <Skeleton /> and <Switch /> */
     --muted: 210 40% 96.1%;
@@ -82,7 +83,7 @@
     @apply my-6 ml-6 list-disc [&>li]:mt-2;
   }
   a {
-    @apply underline hover:text-blue-800;
+    @apply underline hover:text-accent;
   }
   code {
     @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;

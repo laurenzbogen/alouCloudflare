@@ -8,7 +8,7 @@ import placeholders from "@/data/placeholders.json"
 
 const testURL = `https://picsum.photos/seed/${Math.random()}/800`;
 
-const { id, aspectRatio, cropRatio, height, width, className, placeholder } = defineProps({
+const { id, aspectRatio, cropRatio, height, width, className, heroStyles, placeholder } = defineProps({
   id: String,
   height: Number,
   width: Number,
@@ -19,7 +19,8 @@ const { id, aspectRatio, cropRatio, height, width, className, placeholder } = de
   sizes: Array,
   loading: String,
   placeholder: Uint8Array,
-
+  
+  heroStyles: String,
   pid: String,
 })
 
@@ -30,7 +31,6 @@ const placeholderURL = placeholderBinary === undefined ?
   ""
   : thumb.thumbHashToDataURL(placeholderBinary)
 
-console.log("PPP", placeholderURL)
 
 
 
@@ -49,7 +49,6 @@ const imgLoading = ref(true);
 
 function loadedCallback() {
   imgLoading.value = false;
-  console.log(imgLoading.value, id)
 }
 const bassCl = "relative"
 const cl = twMerge(bassCl, className, getRatio())
@@ -66,7 +65,7 @@ const source = getCldSource(id as string)
 <template>
   <div :class="cl">
     <img :src="placeholderURL" class="absolute top-0 left-0 w-full h-full object-cover" alt="">
-    <img ref="img" class="relative w-full h-full object-cover" :src="source" :loading="loading ? loading : 'lazy'" alt="test"
+    <img ref="img" :class="'relative w-full h-full  object-cover ' + heroStyles" :src="source" :loading="loading ? loading : 'lazy'" alt="test"
       :sizes="getSizes(sizes)" @load="imgLoading = false" :srcset="srcSet" />
   </div>
 </template>
