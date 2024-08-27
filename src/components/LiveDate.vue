@@ -26,7 +26,7 @@ function checkStringSet(str: string) {
 
 </script>
 <template>
-  <li class="font-serif list-none mb-4">
+  <li class="font-serif list-none m-0 mb-8">
     <div class="flex flex-col xs:flex-row justify-between items-center">
       <div class="text-2xl font-semibold">{{ formattedDate }}</div>
       <div>{{ formattedTime }}</div>
