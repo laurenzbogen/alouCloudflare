@@ -80,6 +80,7 @@ collections:
           - {label: 'Instagram', name: 'instagram', widget: 'string'}
           - {label: 'Soundcloud', name: 'soundcloud', widget: 'string'}
           - {label: 'Youtube', name: 'youtube', widget: 'string'}
+          - {label: 'Presse', name: 'presse', widget: 'string'}
       - label: 'Impressum'
         name: 'impressum'
         file: 'src/data/impressum.md'
