@@ -5,7 +5,7 @@ import ContactWrapper from "@/components/Contact.vue";
 import Link from "@/components/Link.vue";
 
 import Socials from "@/components/Socials.vue";
-import { presse, instagram } from "@/data/data.json"
+import { presse } from "@/data/data.json"
 
 const isRoot = Astro.url.pathname === "/";
 ---
@@ -15,7 +15,7 @@ const isRoot = Astro.url.pathname === "/";
     <Link href={isRoot ? "/impressum" : "/"} variant="link">
       {isRoot ? "Impressum" : "Home"}
     </Link>
-    <Link variant="link" href={instagram}>Presse</Link>
+    <Link variant="link" href={presse}>Presse</Link>
     <div class="hidden md:flex justify-around">
       <Socials />
     </div>
