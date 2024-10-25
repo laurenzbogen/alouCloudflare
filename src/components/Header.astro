@@ -5,87 +5,106 @@ import Link from "./Link.vue";
 import ClImage from "@/components/ClImage.vue";
 import ImageComponent from "./imageComponents/ImageComponent.astro";
 
-
 import { Instagram } from "lucide-astro";
 import { instagram } from "@/data/data.json";
 ---
 
 <header class="relative flex flex-col lg:flex-col">
-  <div class="flex lg:hidden bg-background1 bg-cover justify-center py-4">
-    <img src="/logo_full.svg" alt="logo" class="h-16 md:h-32 object-contain" />
-  </div>
-  <div class="relative">
-    <img
-      class="absolute top-0 left-0 w-full h-full aspect-[1.8] object-cover"
-      :src="placeholder"
-      alt=""
-    />
-    <div class="relative max-w-[170vh] m-auto border-x-[1px] border-gray-700">
-			<ImageComponent 
-        class="w-full object-cover aspect-[1.6] md:aspect-[1.8] xl:aspect-[2]"
-        id="Alou/xrvb2c83zcpfxhm6nwlj"
-			sizes="100vw" src="/src/assets/images/xrvb2c83zcpfxhm6nwlj-1-.jpg" />
-      <!-- <ClImage -->
-      <!--   class="w-full object-cover aspect-[1.6] md:aspect-[1.8] xl:aspect-[2]" -->
-      <!--   heroStyles="xl:object-[center_-80px]" -->
-      <!--   id="Alou/xrvb2c83zcpfxhm6nwlj" -->
-      <!--   pid="hero" -->
-      <!-- /> -->
-      <!-- Big Nav -->
-      <nav class="lg:block hidden absolute top-0 items-center p-8 w-full">
-        <div
-          class="text-gray-700 max-w-xl flex justify-center m-auto gap-16 xl:gap-24 2xl:gap-32"
-        >
-          <Link class="text-inherit text-[length:inherit]" variant="link" href="#quartet">
-            Quartet
-          </Link>
-          <Link class="text-inherit text-[length:inherit]" variant="link" href="#termine">
-            Termine
-          </Link>
-          <Link class="text-inherit text-[length:inherit]" variant="link" href="#media">
-            Media
-          </Link>
-        </div>
-      </nav>
-      <img
-        src="/logo_full.svg"
-        alt="logo"
-        class="hidden lg:block absolute top-0 left-0 p-4 w-[15%] object-contain"
-      />
-      <div
-        class="absolute bottom-0 left-1/2 -translate-x-1/2 flex justify-end w-full items-end max-w-screen-3xl"
-      >
-        <div class="m-4 xl:mx-[10vw] xl:my-[5vw] gap-4 flex">
-          <ContactWrapper client:load>
-            <!-- Standard Link Styling -->
-            <Button
-              class="text-white underline hover:text-accent opacity-85 hover:opacity-100"
-              size="header"
-              variant="outline"
-            >
-              Kontakt
-            </Button>
-          </ContactWrapper>
-          <Button
-            class="text-white underline hover:text-accent opacity-85 hover:opacity-100"
-            size="icon_header"
-            variant="outline"
-          >
+	<div class="flex lg:hidden bg-background1 bg-cover justify-center py-4">
+		<img
+			src="/logo_full.svg"
+			alt="logo"
+			class="h-16 md:h-32 object-contain"
+		/>
+	</div>
+	<div class="relative">
+		<img
+			class="absolute top-0 left-0 w-full h-full aspect-[1.8] object-cover"
+			:src="placeholder"
+			alt=""
+		/>
+		<div
+			class="relative max-h-[90vh] overflow-y-hidden m-auto border-x-[1px] border-gray-700"
+		>
+			<ImageComponent
+				class="w-full h-full object-cover aspect-[1.6] md:aspect-[1.8] xl:aspect-[2] xl:object-[center_-80px]"
+				id="Alou/xrvb2c83zcpfxhm6nwlj"
+				sizes="100vw"
+				src="/src/assets/images/xrvb2c83zcpfxhm6nwlj-1-.jpg"
+			/>
+			<!-- <ClImage -->
+			<!--   class="w-full object-cover aspect-[1.6] md:aspect-[1.8] xl:aspect-[2]" -->
+			<!--   heroStyles="xl:object-[center_-80px]" -->
+			<!--   id="Alou/xrvb2c83zcpfxhm6nwlj" -->
+			<!--   pid="hero" -->
+			<!-- /> -->
+			<!-- Big Nav -->
+			<nav class="lg:block hidden absolute top-0 items-center p-8 w-full">
+				<div
+					class="text-gray-700 max-w-xl flex justify-center m-auto gap-16 xl:gap-24 2xl:gap-32"
+				>
+					<Link
+						class="text-inherit text-[length:inherit]"
+						variant="link"
+						href="#quartet"
+					>
+						Quartet
+					</Link>
+					<Link
+						class="text-inherit text-[length:inherit]"
+						variant="link"
+						href="#termine"
+					>
+						Termine
+					</Link>
+					<Link
+						class="text-inherit text-[length:inherit]"
+						variant="link"
+						href="#media"
+					>
+						Media
+					</Link>
+				</div>
+			</nav>
+			<img
+				src="/logo_full.svg"
+				alt="logo"
+				class="hidden lg:block absolute top-0 left-0 p-4 w-[15%] object-contain"
+			/>
+			<div
+				class="absolute bottom-0 left-1/2 -translate-x-1/2 flex justify-end w-full items-end max-w-screen-3xl"
+			>
+				<div class="m-4 xl:mx-[10vw] xl:my-[5vw] gap-4 flex">
+					<ContactWrapper client:load>
+						<!-- Standard Link Styling -->
+						<Button
+							class="text-white underline hover:text-accent opacity-85 hover:opacity-100"
+							size="header"
+							variant="outline"
+						>
+							Kontakt
+						</Button>
+					</ContactWrapper>
+					<Button
+						class="text-white underline hover:text-accent opacity-85 hover:opacity-100"
+						size="icon_header"
+						variant="outline"
+					>
 						<a href={instagram}>
-              <Instagram class="w-4" />
-            </a>
-          </Button>
-        </div>
-      </div>
-    </div>
-  </div>
+							<Instagram class="w-4" />
+						</a>
+					</Button>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  <!-- Mobile Nav -->
-  <nav class="lg:hidden bg-background1 bg-cover items-center p-2 w-full">
-    <div class="max-w-xl flex justify-around m-auto gap-8">
-      <Link class="" variant="link" href="#quartet">Quartet</Link>
-      <Link class="" variant="link" href="#termine">Termine</Link>
-      <Link class="" variant="link" href="#media">Media</Link>
-    </div>
-  </nav>
+	<!-- Mobile Nav -->
+	<nav class="lg:hidden bg-background1 bg-cover items-center p-2 w-full">
+		<div class="max-w-xl flex justify-around m-auto gap-8">
+			<Link class="" variant="link" href="#quartet">Quartet</Link>
+			<Link class="" variant="link" href="#termine">Termine</Link>
+			<Link class="" variant="link" href="#media">Media</Link>
+		</div>
+	</nav>
 </header>
