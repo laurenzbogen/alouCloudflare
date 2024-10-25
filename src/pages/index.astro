@@ -1,37 +1,18 @@
 ---
-import { getCollection } from "astro:content";
-
-import Link from "@/components/Link.vue";
-import CdnImage from "@/components/CdnImage.astro";
-import Image from "astro/components/Image.astro";
-import Background1 from "@/assets/images/background1.jpeg";
 import Bio from "@/data/bio.md";
-
-import { Instagram } from "lucide-astro";
-import { instagram } from "@/data/data.json";
-import { Button } from "@/components/ui/button";
-
-import ClImage from "@/components/ClImage.vue";
-import ImageGrid from "@/components/ImageGrid.astro";
 
 import { dates } from "@/data/liveDates.json";
 import LiveDate from "@/components/LiveDate.vue";
+
+import ImageGrid from '@/components/imageComponents/ImageGrid.astro';
+import mainGrid from '@/data/imageData/main-grid.json';
 
 import soundcloudData from "@/data/soundcloud.json";
 import SoundcloudEmbed from "@/components/SoundcloudEmbed.astro";
 import youtubeData from "@/data/videos.json";
 import YTEmbed from "@/components/YTEmbed.astro";
-
-import ContactWrapper from "@/components/Contact.vue";
-
 import Header from "@/components/Header.astro";
 import Toaster from '@/components/ui/toast/Toaster.vue'
-
-// Get all entries from a collection.
-// Requires the name of the collection as an argument.
-// Example: retrieve `src/content/blog/**`
-const allBlogPosts = await getCollection("blog");
-const { Content, headings } = await allBlogPosts[0].render();
 import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
@@ -83,7 +64,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     </div>
   </section>
   <section id="media" class="bg-background1 bg-cover p-4 md:p-12 py-12">
-    <ImageGrid />
+		<ImageGrid images={mainGrid.images} />
   </section>
   <Toaster />
 </BaseLayout>

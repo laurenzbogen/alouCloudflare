@@ -1,0 +1,65 @@
+---
+import ImageComponent from "./ImageComponent.astro";
+import GridItem from "./GridItem.vue"
+import { twMerge } from "tailwind-merge";
+import { inferRemoteSize } from "astro:assets"
+
+interface ImageSource{
+  image: string,
+  copyright?: string
+}
+
+interface Props {
+  class: string
+  images: ImageSource[]
+}
+
+const { class: addedClass, images } = Astro.props
+
+
+function getFullscreenAttr(ratio: number) {
+  const base = "object-cover max-w-none"
+  const sizing = ratio > 1 ? 
+      "max-w-[1500px] w-[90vw] md:w-[70vw] 2xl:w-[55vw] aspect-[1.5] max-h-[80vh]" 
+      : "max-w-[90vw] w-[53.9vh] aspect-[0.77] md:max-w-[70vw]"
+
+  const sizes = ratio > 1 ?
+    "((min-width: 768px) and (max-width: 1536px)) min(1600px, 80vw), (min-width: 1536px) min(1600px, 55vw), min(1600px, 100vw)"
+    : "(min-width: 768px) min(55vh, 80vw), min(55vh, 100vw)"
+
+  return {
+    sizes,
+    class: twMerge(base, sizing)
+  }
+}
+
+const ratios = await Promise.all(images.map(async ({image}: ImageSource): Promise<number> => {
+  if (image.startsWith("http")) {
+    const {width, height} = await inferRemoteSize(image)
+    return width / height
+  }
+  const allImages = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/images/*.{jpeg,jpg,png,gif}",
+  );
+  const { default: { width, height }} =  await allImages[image]()
+  return width / height
+}))
+---
+
+<div class={twMerge("p-0 sm:px-4 md:px-12 m-auto", addedClass)}>
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-1 p-1 cursor-auto">
+    {images.map(({image, copyright}: ImageSource, i: number) => (
+      <GridItem client:load>
+        <div class="" slot="Trigger">
+          <ImageComponent class="align-middle w-full aspect-square cursor-pointer" sizes="50vw" src={image}/>
+        </div>
+        <div slot="Fullscreen">
+          <ImageComponent {...getFullscreenAttr(ratios[i])} src={image}/>
+          {copyright !== undefined && 
+            <p class="text-right text-primary text-xs">© {copyright}</p>
+          }
+        </div>
+      </GridItem>
+    ))}
+  </div>
+</div>

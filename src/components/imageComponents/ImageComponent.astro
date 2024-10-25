@@ -1,0 +1,128 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import * as thmb from "thumbhash";
+import { Jimp } from "jimp";
+import { Image } from "astro:assets";
+import { twMerge } from "tailwind-merge";
+
+export interface Props extends HTMLAttributes<"img"> {
+	// ...
+	sizes: string;
+}
+const { src, class: passedClass, ...props } = Astro.props;
+
+async function getImageMetadata(src: string) {
+	if (import.meta.env.DEV === true) {
+		return {
+			width: 1,
+			height: 1,
+			placeholder: null,
+		};
+	}
+	const cleanedSrc = src.charAt(0) === "/" ? src.slice(1) : src;
+	const jimpImage = await Jimp.read(cleanedSrc);
+	const { width, height } = {
+		width: jimpImage.bitmap.width,
+		height: jimpImage.bitmap.height,
+	};
+	jimpImage.scaleToFit({ w: 100, h: 100 });
+	const hash = thmb.rgbaToThumbHash(
+		jimpImage.bitmap.width,
+		jimpImage.bitmap.height,
+		[...jimpImage.bitmap.data],
+	);
+
+	return {
+		width,
+		height,
+		placeholder: thmb.thumbHashToDataURL(hash),
+	};
+}
+
+async function getAstroURL(src: string) {
+	if (src.startsWith("http")) {
+		return src;
+	}
+	const allImages = import.meta.glob<{ default: ImageMetadata }>(
+		"/src/assets/images/*.{jpeg,jpg,png,gif}",
+	);
+	const astroURL = allImages[src]();
+	return astroURL;
+}
+
+async function translateSrc(src?: string | null) {
+	if (src === undefined || src === null) {
+		return {
+			astroURL: "",
+			width: 0,
+			height: 0,
+			placeholder: "",
+		};
+	}
+	const metadata = await getImageMetadata(src);
+	const astroURL = getAstroURL(src);
+
+	return { astroURL, ...metadata };
+}
+
+function getWidths(maxWidth: number) {
+	if (import.meta.env.DEV) {
+		return [maxWidth];
+	}
+	let widths = [];
+	let iterator = 0;
+	while (iterator < Math.min(maxWidth, 2000)) {
+		iterator += 100;
+		widths.push(iterator);
+	}
+	widths.push(maxWidth);
+	return widths;
+}
+
+const { astroURL, width, height, placeholder } = await translateSrc(src);
+const widths = getWidths(width);
+
+function filterString(searchFor: string, searchIn?: string | null) {
+	if (!searchIn) return "";
+	const words = searchIn.split(" ");
+	const filtered = words.filter((w) => w.includes(searchFor));
+	return filtered.join(" ");
+}
+
+const imgKeywords = ["object", "max-w", "max-h", "w-", "h-"];
+const imgClass = imgKeywords
+	.map((key) => filterString(key, passedClass))
+	.join(" ");
+---
+
+<div class={twMerge("relative", passedClass)}>
+	{
+		placeholder !== null && (
+			<Image
+				class={twMerge(
+					"object-cover absolute top-0 left-0 h-full w-full",
+					imgClass,
+				)}
+				src={placeholder}
+				alt=""
+				width={width}
+				format="webp"
+				quality={70}
+				height={height}
+				widths={widths}
+				{...props}
+			/>
+		)
+	}
+	<Image
+		class={twMerge("object-cover relative h-full", imgClass)}
+		src={astroURL}
+		alt=""
+		width={width}
+		format="webp"
+		quality={70}
+		height={height}
+		widths={widths}
+		{...props}
+	/>
+</div>

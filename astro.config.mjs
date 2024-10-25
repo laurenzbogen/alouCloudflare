@@ -7,7 +7,10 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [react(), vue(), tailwind({ applyBaseStyles: false })],
   image: {
-    domains: ['res.cloudinary.com'],
-    service: passthroughImageService(),
-  }
+    remotePatterns: [{
+      protocol: "https"
+    }],
+    // domains: ['res.cloudinary.com'],
+    service: import.meta.env.DEV ? passthroughImageService() : undefined,
+  },
 });

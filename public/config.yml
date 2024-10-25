@@ -6,6 +6,20 @@ backend:
 media_folder: "src/assets/images" # Location where files will be stored in the repo
 
 collections:
+  - name: 'images'
+    label: 'Images'
+    folder: 'src/data/imageData'
+    create: true
+    identifier_field: 'name'
+    extension: 'json'
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - label: Images
+        name: images
+        widget: list
+        fields:
+        - {label: Name, name: name, widget: string, required: false}
+        - {label: "Image", name: "image", widget: "image"}
   - name: 'data' # Used in routes, e.g., /admin/collections/blog
     label: 'Data' # Used in the UI
     files: 
