@@ -18,6 +18,7 @@ const formattedDate = new Date(date).toLocaleDateString("de-DE", {
 const parsedDate = new Date(date)
 // hacky solution because of utc problems
 const formattedTime = parsedDate.getUTCHours().toString().padStart(2, '0') + ":" + parsedDate.getUTCMinutes().toString().padStart(2, '0');
+const show = parsedDate > new Date()
 
 
 function checkStringSet(str: string) {
@@ -26,7 +27,7 @@ function checkStringSet(str: string) {
 
 </script>
 <template>
-  <li class="font-serif list-none m-0 mb-8">
+  <li v-if="show" class="font-serif list-none m-0 mb-8">
     <div class="flex flex-col xs:flex-row justify-between items-center">
       <div class="text-2xl font-semibold">{{ formattedDate }}</div>
       <div>{{ formattedTime }}</div>
