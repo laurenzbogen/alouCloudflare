@@ -1,7 +1,9 @@
 local_backend: true
 
 backend:
-  name: 'git_gateway'
+  # name: 'git_gateway
+  name: 'github'
+  repo: laurenzbogen/alouCloudflare'
 
 media_folder: "src/assets/images" # Location where files will be stored in the repo
 
