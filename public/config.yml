@@ -5,8 +5,7 @@ backend:
   name: 'github'
   repo: laurenzbogen/alouCloudflare'
   branch: main # Branch to update (optional; defaults to master)
-  base_url: https://aloustringquartet.de
-  auth_endpoint: /api/auth
+  base_url: https:// sveltia-cms-auth.damp-bread-4e9d.workers.dev
 
 media_folder: "src/assets/images" # Location where files will be stored in the repo
 
