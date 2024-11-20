@@ -46,6 +46,12 @@
       "venue": "Cafe Plume",
       "city": "Berlin",
       "date": "2024-12-06T20:00:00.000Z"
+    },
+    {
+      "city": "Döbeln ",
+      "venue": "Treibhaus e.V.",
+      "date": "2024-12-07T17:00:00.000Z",
+      "comment": "Kinderkonzert"
     }
   ]
 }
