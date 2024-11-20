@@ -68,28 +68,6 @@ collections:
               - {label: 'Name', name: 'name', widget: 'string'}
               - {label: 'Description', name: 'description', widget: 'markdown', required: false}
               - {label: 'Link', name: 'link', widget: 'string'}
-      - label: 'Links'
-        name: 'links'
-        file: 'src/data/links.json'
-        fields:
-          - label: 'Links'
-            name: 'links'
-            widget: 'list'
-            fields:
-              - {label: 'Name', name: 'name', widget: 'string'}
-              - {label: 'Link', name: 'link', widget: 'string'}
-      - label: 'Downloads'
-        name: 'downloads'
-        file: 'src/data/downloads.json'
-        media_folder: '/public/assets/downloads'
-        public_folder: '/assets/downloads'
-        fields:
-          - label: 'Downloads'
-            name: 'downloads'
-            widget: 'list'
-            fields: 
-              - {label: Name, name: 'name', widget: 'string'}
-              - {label: File, name: 'file', widget: 'file'}
       - label: 'Data'
         name: 'data'
         file: 'src/data/data.json'
