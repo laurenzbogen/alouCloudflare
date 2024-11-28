@@ -4,48 +4,74 @@ import type { HTMLAttributes } from "astro/types";
 import Footer from "@/components/Footer.astro";
 
 interface Props extends HTMLAttributes<"body"> {
-  title?: string;
+	title?: string;
 }
 
 const { title: titleOrEmpty, ...attr } = Astro.props;
 
 const title =
-  titleOrEmpty == undefined || titleOrEmpty === ""
-    ? "Placeholder"
-    : titleOrEmpty;
+	titleOrEmpty == undefined || titleOrEmpty === ""
+		? "Placeholder"
+		: titleOrEmpty;
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="Website des Alou String Quartet">
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/favicon/site.webmanifest" />
+		<link
+			rel="mask-icon"
+			href="/favicon/safari-pinned-tab.svg"
+			color="#5bbad5"
+		/>
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta name="description" content="Website des Alou String Quartet" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Prata&display=swap"
-      rel="stylesheet"
-    />
-    <title>{title}</title></head
-  >
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Prata&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>{title}</title></head
+	>
 
-  <body
-    class="bg-background min-h-screen flex flex-col justify-between"
-    {...attr}
-  >
-    <slot>
-      <h1>Empty Template</h1>
-    </slot>
+	<body
+		class="bg-background min-h-screen flex flex-col justify-between"
+		{...attr}
+	>
+		<slot>
+			<h1>Empty Template</h1>
+		</slot>
 
-    <Footer />
-  </body>
+		<Footer />
+	</body>
 </html>
