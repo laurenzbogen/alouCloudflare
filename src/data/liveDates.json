@@ -70,7 +70,7 @@
       "date": "2025-03-06T20:00:00.000Z"
     },
     {
-      "venue": "TBA",
+      "venue": "privat location",
       "city": "Salzburg",
       "date": "2025-03-07T20:00:00.000Z"
     },
@@ -98,6 +98,11 @@
       "venue": "Villa Falkenhorst",
       "date": "2025-05-18T20:00:00.000Z",
       "city": "Österreich"
+    },
+    {
+      "venue": "Kultur Feldstein Kirche",
+      "city": "Recknitz",
+      "date": "2025-07-05T20:00:00.000Z"
     }
   ]
 }
