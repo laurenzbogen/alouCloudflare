@@ -92,17 +92,32 @@
     {
       "venue": "JazzKitchen ",
       "city": "Hamburg",
-      "date": "2025-05-02T20:00:00.000Z"
+      "date": "2025-05-02T20:00:00.000Z",
+      "mainLink": "https://jazzfederation.de/event/jazz-kitchen-presents-alou-string-quartet/#tickets"
+    },
+    {
+      "venue": "L'écritoire ",
+      "date": "2025-05-03T19:30:00.000Z",
+      "city": "Berlin",
+      "mainLink": "https://lecritoire.de/veranstaltungen-mec/alou-string-quartet/"
+    },
+    {
+      "city": "Halle",
+      "mainLink": "https://www.peissnitzhaus.de/kulturveranstaltungen/eventdetail/1186/-/swh-saalejazz",
+      "venue": "SWH Saalejazz",
+      "date": "2025-05-04T14:00:00.000Z"
     },
     {
       "venue": "Villa Falkenhorst",
       "date": "2025-05-18T17:00:00.000Z",
-      "city": "Österreich"
+      "city": "Österreich",
+      "mainLink": "https://www.falkenhorst.at/veranstaltungen/alou-string-quartet/"
     },
     {
       "venue": "Kultur Feldstein Kirche",
       "city": "Recknitz",
-      "date": "2025-07-05T20:00:00.000Z"
+      "date": "2025-07-05T19:30:00.000Z",
+      "mainLink": "https://customer07.ticketing.cloud.sap/shop/15/event/21685"
     }
   ]
 }
