@@ -88,6 +88,12 @@
       "city": "Recknitz",
       "date": "2025-07-05T19:30:00.000Z",
       "mainLink": "https://customer07.ticketing.cloud.sap/shop/15/event/21685"
+    },
+    {
+      "venue": "detect classik festival",
+      "city": "Schloss Bröllin",
+      "mainLink": "https://detectclassic.com/artists/alou-string-quartet",
+      "date": "2025-08-09T18:00:00.000Z"
     }
   ]
 }
