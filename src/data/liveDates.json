@@ -91,9 +91,9 @@
     },
     {
       "venue": "Kultur.Farm",
-      "date": "2015-09-20T17:00:00.000+02:00",
-      "city": "Groß Pankow",
-      "mainLink": "https://kultur.farm/event/barock-gegenwart/"
+      "date": "2025-09-20T20:00:00.000+02:00",
+      "mainLink": "https://kultur.farm/event/barock-gegenwart/",
+      "city": "Groß Pakow"
     },
     {
       "venue": "Kinderkonzerte ",
@@ -115,11 +115,11 @@
     {
       "venue": "Kinderkonzert",
       "city": "Döbeln",
-      "date": "2025-09-28T16:00:00.000+02:00"
+      "date": "2025-09-28T18:00:00.000+02:00"
     },
     {
       "venue": "Café Saite ",
-      "date": "2025-09-29T20:00:00.000+02:00",
+      "date": "2025-09-29T22:00:00.000+02:00",
       "city": "Dresden"
     },
     {
