@@ -116,7 +116,8 @@
     {
       "venue": "b-flat",
       "city": "Berlin",
-      "date": "2025-10-07T22:00:00.000+02:00"
+      "date": "2025-10-07T23:00:00.000+02:00",
+      "mainLink": "https://www.b-flat-berlin.de/events/p98r8jml96hdn2l-9ef9a"
     }
   ]
 }
