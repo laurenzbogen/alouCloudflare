@@ -78,10 +78,79 @@
       "date": "2025-05-04T14:00:00.000Z"
     },
     {
-      "venue": "b-flat",
-      "city": "Berlin",
-      "date": "2025-10-07T23:00:00.000+02:00",
-      "mainLink": "https://www.b-flat-berlin.de/events/p98r8jml96hdn2l-9ef9a"
+      "venue": "Kunshan Culture and Art Center",
+      "date": "2015-10-17T18:00:00.000+02:00",
+      "city": "China Tour "
+    },
+    {
+      "venue": "Taishan Grand Theatre",
+      "date": "2015-10-18T18:00:00.000+02:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Suzhou Poly Grand Theatre",
+      "date": "2025-10-19T18:00:00.000+02:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Nanjing Grand Theatre",
+      "date": "2025-10-21T18:00:00.000+02:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Hanzghou Linging Grand Theatre",
+      "date": "2025-10-22T18:00:00.000+02:00",
+      "city": "China Tour "
+    },
+    {
+      "venue": "Zhuji Xishi Grand Theatre",
+      "date": "2025-10-23T18:00:00.000+02:00",
+      "city": "China Tour "
+    },
+    {
+      "venue": "Wenzhou Grand Theatre",
+      "date": "2025-10-24T18:00:00.000+02:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Fuzhou Strait Culture and Art Center (Concert Hall)",
+      "date": "2025-10-25T18:00:00.000+02:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Nanchang Poly Grand Theatre",
+      "date": "2025-10-26T18:00:00.000+01:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Henan Arts Centre Concert Hall",
+      "date": "2025-10-28T18:00:00.000+01:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Changsha Concert Hall",
+      "date": "2025-10-29T18:00:00.000+01:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Guangxi Culture Arts Centre",
+      "date": "2025-10-31T18:00:00.000+01:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Dongguan Yulan Theatre",
+      "date": "2025-11-02T18:00:00.000+01:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Haikou Bay Performing Arts Centre",
+      "date": "2025-11-04T18:00:00.000+01:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Qidong Poly Grand Theatre Concert Hall",
+      "date": "2025-11-06T18:00:00.000+01:00",
+      "city": "China Tour"
     }
   ]
 }
