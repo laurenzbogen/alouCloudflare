@@ -151,6 +151,31 @@
       "venue": "Qidong Poly Grand Theatre Concert Hall",
       "date": "2025-11-06T18:00:00.000+01:00",
       "city": "China Tour"
+    },
+    {
+      "venue": "Shanxi Grand Threatre Cencert Hall",
+      "date": "2025-11-08T18:00:00.000+01:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Baoding Guan Hanging Grand Theatre",
+      "date": "2025-11-09T18:00:00.000+01:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Weifang Grand Theatre Concert Hall",
+      "date": "2025-11-11T18:00:00.000+01:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Tangshan Grand Theatre",
+      "date": "2025-11-12T18:00:00.000+01:00",
+      "city": "China Tour"
+    },
+    {
+      "venue": "Shenyang Shengjing Grand Theatre",
+      "date": "2025-11-13T18:00:00.000+01:00",
+      "city": "China Tour"
     }
   ]
 }
