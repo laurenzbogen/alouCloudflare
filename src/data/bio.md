@@ -4,4 +4,6 @@ Die vier MusikerInnen, Myrsini Bekakou (Violine), Alma Gröning (Violine), [Davi
 
 In den modernen Arrangements und Eigenkompositionen spiegelt sich eine Vielseitigkeit wieder, die sich aus den vier Lebenswegen und der Begeisterung für die verschiedenen Musikstile heraus entwickelt. 
 
-Das Quartett lädt das Publikum dazu ein, in eine Welt voll reicher Akkorde, dynamischer Rhythmen und tiefer Improvisationen einzutauchen.
+Das Quartett lädt das Publikum dazu ein, in eine Welt voll reicher Akkorde, dynamischer Rhythmen und tiefer Improvisationen einzutauchen. Im Herbst 2025 nimmt die Band ihr Debut-Album "Kadario" im Studio auf.
+
+Aktuell ist das Streichquartett zusammen mit dem [NuHussel Orchestra](https://www.nuhusselorchestra.com/) auf Tour in China.
