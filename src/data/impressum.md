@@ -7,4 +7,4 @@ Alma Gröning
 
 Fotos von:
 
-Mona Petter, Linus Haagen und David zu Höne
+Mona Petter, David zu Höne, Dovile Sermokas
