@@ -2,10 +2,12 @@
   "name": "main-grid",
   "images": [
     {
-      "image": "/src/assets/images/2025-10-06_alou-string_foto_dovile-sermokas-e36a0751.jpg"
+      "image": "/src/assets/images/2025-10-06_alou-string_foto_dovile-sermokas-e36a0751.jpg",
+      "name": "Aktuelles Gruppenbild"
     },
     {
-      "image": "/src/assets/images/dsc01802.jpeg"
+      "image": "/src/assets/images/alou_boerne-15.jpg",
+      "name": "Studio"
     },
     {
       "image": "/src/assets/images/export-0630.jpeg"
@@ -15,6 +17,10 @@
     },
     {
       "image": "/src/assets/images/export-1026.jpeg"
+    },
+    {
+      "image": "/src/assets/images/dsc01802.jpeg",
+      "name": "Gruppenbild SW Mona"
     }
   ]
 }
