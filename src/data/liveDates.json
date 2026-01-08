@@ -178,10 +178,32 @@
       "city": "China Tour"
     },
     {
+      "venue": "Birdland ",
+      "city": "Hamburg ",
+      "date": "2026-03-20T22:00:00.000+01:00"
+    },
+    {
       "venue": "Jazzig in Lüneburg",
       "city": "Lüneburg",
       "date": "2026-05-08T22:00:00.000+02:00",
       "mainLink": "https://www.jazzig.net/termine/alou-string-quartet/"
+    },
+    {
+      "venue": "KUKUMU",
+      "city": "Berlin",
+      "date": "2026-05-09T22:00:00.000+02:00"
+    },
+    {
+      "venue": "L'Écritoire",
+      "date": "2026-06-12T22:00:00.000+02:00",
+      "city": "Berlin",
+      "comment": "mit Moritz Sembritzki"
+    },
+    {
+      "venue": "Theaterhaus Schille",
+      "date": "2026-06-13T22:00:00.000+02:00",
+      "city": "Leipzig",
+      "comment": "mit Moritz Sembritzki"
     }
   ]
 }
