@@ -3,7 +3,39 @@
   "images": [
     {
       "image": "/src/assets/images/alou_boerne-15.jpg",
-      "name": "Studio"
+      "name": "Studio I"
+    },
+    {
+      "name": "Studio II",
+      "image": "/src/assets/images/alou_boerne-21.jpg"
+    },
+    {
+      "name": "Studio III",
+      "image": "/src/assets/images/alou_boerne-17.jpg"
+    },
+    {
+      "image": "/src/assets/images/2025-10-06_alou-string_foto_dovile-sermokas-e36a0690.jpg",
+      "name": "Haare mit Wind"
+    },
+    {
+      "image": "/src/assets/images/2025-10-06_alou-string_foto_dovile-sermokas-e36a0787a.jpg",
+      "name": "Gruppe mit Wolken lachen"
+    },
+    {
+      "image": "/src/assets/images/2025-10-06_alou-string_foto_dovile-sermokas-e36a1424b.jpg",
+      "name": "Treppe ernst"
+    },
+    {
+      "name": "Live I",
+      "image": "/src/assets/images/export-2338.jpg"
+    },
+    {
+      "name": "Live II",
+      "image": "/src/assets/images/alou_b-flat-14.jpg"
+    },
+    {
+      "name": "Live III",
+      "image": "/src/assets/images/alma-quartett_3000px-22.jpg"
     }
   ]
 }
