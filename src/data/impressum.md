@@ -1,4 +1,4 @@
-Kontakt: aloustringquartet@gmail.de
+Kontakt: aloustringquartet@gmail.com
 
 Angaben gemäß § 5 TMG
 
