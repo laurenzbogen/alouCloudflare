@@ -225,11 +225,11 @@
       "mainLink": "https://kinderphilharmonie.de/hamburg/",
       "venue": "Kinderphilharmonie",
       "city": "Hamurg ",
-      "date": "2026-11-07T14:00:00.000+01:00"
+      "date": "2026-11-07T11:30:00.000+01:00"
     },
     {
       "venue": "Kinderphilharmonie ",
-      "date": "2026-11-08T12:00:00.000+01:00",
+      "date": "2026-11-08T09:00:00.000+01:00",
       "city": "Hamburg",
       "mainLink": "https://kinderphilharmonie.de/hamburg/"
     },
@@ -244,6 +244,12 @@
       "date": "2026-12-07T21:00:00.000+01:00",
       "city": "Leipzig",
       "mainLink": "https://montagsjazz-laden-auf-zeit.de/veranstaltungen/"
+    },
+    {
+      "venue": "Kinderkonzerte @Kinderphilharmonie ",
+      "date": "2026-11-28T08:00:00.000+01:00",
+      "city": "Berlin ",
+      "mainLink": "https://kinderphilharmonie.de/berlin/"
     }
   ]
 }
