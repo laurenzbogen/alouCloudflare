@@ -4,6 +4,8 @@ Die vier MusikerInnen, Myrsini Bekakou (Violine), Alma Gröning (Violine), Davis
 
 In den modernen Arrangements und Eigenkompositionen spiegelt sich eine Vielseitigkeit wieder, die sich aus den vier Lebenswegen und der Begeisterung für die verschiedenen Musikstile heraus entwickelt. Das Quartett lädt das Publikum dazu ein, in eine Welt voll reicher Akkorde, dynamischer Rhythmen und tiefer Improvisationen einzutauchen. 
 
-Ihr Debut-Album wird 2026 veröffentlicht.
+Ihr Debut-Album "KADARIO" wird am 05.03.2027 bei Boomslang Records veröffentlicht.
 
-We are the Alou String Quartet, a modern string quartet exploring the borders between jazz, groove and improvisation. Our debut album will be released in 2026! [](https://www.nuhusselorchestra.com/)Follow us here and stay in touch for updates and new music soon.
+We are the Alou String Quartet, a modern string quartet exploring the borders between jazz, groove and improvisation. Our debut album will be released in March 2027 with Boomslang Records.
+
+Follow us here and stay in touch for updates and new music soon.
