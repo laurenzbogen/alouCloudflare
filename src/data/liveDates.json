@@ -210,12 +210,6 @@
       "mainLink": "https://www.tixforgigs.com/Event/74166"
     },
     {
-      "venue": "Musikbrauereri @Kinderphilharmonie",
-      "city": "Berlin ",
-      "date": "2026-09-27T12:00:00.000+02:00",
-      "mainLink": "https://kinderphilharmonie.de/berlin/"
-    },
-    {
       "venue": "UT Connewitz @Leipziger Jazztage ",
       "date": "2026-10-24T17:00:00.000+02:00",
       "city": "Leipzig",
@@ -234,6 +228,12 @@
       "mainLink": "https://kinderphilharmonie.de/hamburg/"
     },
     {
+      "venue": "Kinderkonzerte @Kinderphilharmonie ",
+      "date": "2026-11-28T10:00:00.000+01:00",
+      "city": "Berlin ",
+      "mainLink": "https://kinderphilharmonie.de/berlin/"
+    },
+    {
       "venue": "Blue Note ",
       "date": "2026-12-03T21:00:00.000+01:00",
       "city": "Dresden",
@@ -244,12 +244,6 @@
       "date": "2026-12-07T21:00:00.000+01:00",
       "city": "Leipzig",
       "mainLink": "https://montagsjazz-laden-auf-zeit.de/veranstaltungen/"
-    },
-    {
-      "venue": "Kinderkonzerte @Kinderphilharmonie ",
-      "date": "2026-11-28T10:00:00.000+01:00",
-      "city": "Berlin ",
-      "mainLink": "https://kinderphilharmonie.de/berlin/"
     }
   ]
 }
