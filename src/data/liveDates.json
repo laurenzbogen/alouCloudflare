@@ -216,6 +216,12 @@
       "mainLink": "https://www.jazzclub-leipzig.de/kategorie-jazztage/leipziger-jazznachwuchspreis-alma-groening-mit-alou-string-quartet/"
     },
     {
+      "venue": "Jazzhall",
+      "city": "Hamburg",
+      "date": "2026-11-25T20:30:00.000+01:00",
+      "mainLink": "https://www.jazzhall.de/tickets/?eid=211372"
+    },
+    {
       "venue": "Kinderkonzerte @Kinderphilharmonie ",
       "date": "2026-11-28T10:00:00.000+01:00",
       "city": "Berlin ",
@@ -234,21 +240,15 @@
       "mainLink": "https://montagsjazz-laden-auf-zeit.de/veranstaltungen/"
     },
     {
+      "venue": "cassette head session 90mil ",
+      "city": "Berlin",
+      "date": "2026-12-09T21:00:00.000+01:00"
+    },
+    {
       "venue": "Macke Prinz",
       "date": "2026-12-13T20:00:00.000+01:00",
       "city": "Berlin",
       "mainLink": "https://maps.app.goo.gl/NiFr57xM1AAba8qS8"
-    },
-    {
-      "venue": "Jazzhall",
-      "city": "Hamburg",
-      "date": "2026-11-25T20:30:00.000+01:00",
-      "mainLink": "https://www.jazzhall.de/tickets/?eid=211372"
-    },
-    {
-      "venue": "cassette head session 90mil ",
-      "city": "Berlin",
-      "date": "2026-12-09T21:00:00.000+01:00"
     }
   ]
 }
